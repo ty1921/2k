@@ -1,0 +1,277 @@
+<!-- 
+ *
+ * [Mikey HOMEPAGE]
+ * @author      <[ty1921@gmail.com]>
+ * @version     1.0
+ * @create      2019-7-25 18:56:19
+ * 
+ -->
+
+<!DOCTYPE html>
+
+<html lang="zh-cn">
+
+<head>
+	
+	<meta charset='utf-8' />
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+
+
+	<title> Mikey HOMEPAGE </title>
+
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,user-scalable=no,maximum-scale=1.0" id="viewport">
+
+	<meta name="author" content="tyin@live.com">
+	
+	 <!-- Link Swiper's CSS -->
+  	 <link href="https://cdn.bootcss.com/Swiper/4.3.0/css/swiper.min.css" rel="stylesheet">
+
+
+	<style type="text/css">
+		
+		html, body {
+	      position: relative;
+	      height: 100%;
+	    }
+	    body {
+	      background: #eee;
+	      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	      font-size: 14px;
+	      color:#000;
+	      margin: 0;
+	      padding: 0;
+	    }
+	    .swiper-container {
+	      width: 100%;
+	      height: 100%;
+	      background: #000;
+	    }
+	    .swiper-slide {
+	      font-size: 18px;
+	      color:#fff;
+	      -webkit-box-sizing: border-box;
+	      box-sizing: border-box;
+	      padding: 40px 60px;
+	    }
+	    .parallax-bg {
+	      position: absolute;
+	      left: 0;
+	      top: 0;
+	      width: 130%;
+	      height: 100%;
+	      -webkit-background-size: cover;
+	      background-size: cover;
+	      background-position: center;
+	    }
+	    .swiper-slide .title {
+	      font-size: 41px;
+	      font-weight: 300;
+	    }
+	    .swiper-slide .subtitle {
+	      font-size: 21px;
+	    }
+	    .swiper-slide .text {
+	      font-size: 14px;
+	      max-width: 400px;
+	      line-height: 1.3;
+	    }
+		
+
+
+
+
+		.logo{
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 15%;
+			max-width: 150px;
+			z-index:99999999;
+		}
+
+
+
+	</style>
+
+</head>
+
+<!-- BODY SECTION -------------------------------------------------------------------------------------->
+
+<body style="margin:auto;border:0px solid blue; background-color:#FFFFFF;border: 0px solid blue;max-height: 60vh;">
+
+
+
+<div class="container" style="position:relative;border:0px solid red;">
+
+	
+	<img src="./images/logo.jpg" class="logo">
+
+	<!-- Swiper -->
+	<div class="swiper-container" style="z-index: 999">
+
+	<div class="parallax-bg"  ></div>
+
+	<div class="swiper-wrapper">
+
+	  <div class="swiper-slide" style="background-image:url(images/1.jpg)">
+	    <div class="title" data-swiper-parallax="-300">Slide 1</div>
+	    <div class="subtitle" data-swiper-parallax="-200">Subtitle</div>
+	    <div class="text" data-swiper-parallax="-100">
+	      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo. Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod. Aliquam hendrerit lorem at elit facilisis rutrum. Ut at ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec, tincidunt ut libero. Aenean feugiat non eros quis feugiat.</p>
+	    </div>
+	  </div>
+
+	  <div class="swiper-slide" style="background-image:url(images/2.jpg)">
+	    <div class="title" data-swiper-parallax="-300" data-swiper-parallax-opacity="0">Slide 2</div>
+	    <div class="subtitle" data-swiper-parallax="-200">Subtitle</div>
+	    <div class="text" data-swiper-parallax="-100">
+	      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo. Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod. Aliquam hendrerit lorem at elit facilisis rutrum. Ut at ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec, tincidunt ut libero. Aenean feugiat non eros quis feugiat.</p>
+	    </div>
+	  </div>
+	  <div class="swiper-slide" style="background-image:url(images/3.jpg)">
+	    <div class="title" data-swiper-parallax="-300">Slide 3</div>
+	    <div class="subtitle" data-swiper-parallax="-200">Subtitle</div>
+	    <div class="text" data-swiper-parallax="-100">
+	      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo. Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod. Aliquam hendrerit lorem at elit facilisis rutrum. Ut at ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec, tincidunt ut libero. Aenean feugiat non eros quis feugiat.</p>
+	    </div>
+	  </div>
+	</div>
+	<!-- Add Pagination -->
+	<div class="swiper-pagination swiper-pagination-white"></div>
+
+	</div>
+</div>
+
+
+<div style="border: 1px solid red;width: 100%;">
+	<img src="./images/mid.jpg" style="width: 100%;">
+</div>
+
+
+<div style="border: 1px solid blue;width: 100%;background-color: #000000;text-align: center;padding:30px 0;">
+	<img src="./images/copyright.png" style="width: 24%;min-width: 300px;">
+</div>
+
+<!-- mask
+<div id="mask">
+	<img src="./images/loading.gif">
+</div> -->
+
+<!-- JS SECTION -------------------------------------------------------------------------------------->
+
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+
+<script src="https://cdn.bootcss.com/Swiper/4.3.0/js/swiper.min.js"></script>
+
+
+
+<script type="text/javascript">
+
+//comm config ----------------------------------------------
+var host 	  = 'http://192.168.15.248/';
+
+var video_id  = 0;
+
+//get request parameter
+var region 	  = fnGet( 'region' );
+
+
+var yy = new Array();
+
+
+
+
+
+
+//when document ready
+$(function(){
+
+ 	var swiper = new Swiper('.swiper-container', {
+      speed: 600,
+      parallax: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        loop:true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+
+
+});
+
+
+
+
+//---------------------------------------------------------------
+//function section ----------------------------------------------
+//---------------------------------------------------------------
+
+/**
+ * [fnReg new user register]
+ * @return bool
+ */
+function fnReg()
+{
+	$.ajax({
+		url: host + "gmd/f_api/comment_user.php",
+		data:{
+			'action':'register',
+			'game_user_id':uid,
+			'nickname': nickname,
+			'head_img': icon,
+			'frame_icon': frame_icon
+		},
+		type: 'POST',
+		dataType : "json",
+		success: function(res)
+		{	
+			if( res.code == 1 )
+			{
+				window.localStorage.setItem('gmd_user', 1);
+			}
+			else
+			{
+				console.log( res );
+
+				fnTips( yy[3]);
+			}
+		},
+		 error: function(XMLHttpRequest, textStatus, errorThrown) {
+		    console.log(XMLHttpRequest);
+			console.log(errorThrown);
+			console.log(textStatus);
+			fnTips( yy[4] );
+		}
+	});
+}
+
+
+
+
+/**
+ * [fnGet get request parameter]
+ * @param  {[char]} name [GET key]
+ * @return {[char]}      [GET key's value]
+ */
+function fnGet(name) { 
+    var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+     var r = window.location.search.substr(1).match(reg);
+     if(r!=null)return  decodeURI(r[2]); return null;
+}
+
+
+
+
+</script>
+
+
+
+</body>
+</html>
