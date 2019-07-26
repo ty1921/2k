@@ -31,67 +31,122 @@
 
 
 	<style type="text/css">
+
+		@font-face {
+            font-family: 'BOLTI';
+            src: url('./css/BOLTI.TTF') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'BOLT';
+            src: url('./css/BOLT.TTF') format('truetype');
+        }
 		
 		html, body {
 	      position: relative;
+	      width: 100%;
 	      height: 100%;
 	    }
+
 	    body {
 	      background: #eee;
-	      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	      font-family: Microsoft Yahei, Helvetica, Arial, sans-serif;
 	      font-size: 14px;
 	      color:#000;
 	      margin: 0;
 	      padding: 0;
 	    }
+
 	    .swiper-container {
 	      width: 100%;
 	      height: 100%;
 	      background: #000;
 	    }
+
 	    .swiper-slide {
+	    	position: relative;
 	      font-size: 18px;
 	      color:#fff;
 	      -webkit-box-sizing: border-box;
 	      box-sizing: border-box;
-	      padding: 40px 60px;
+	      /*padding: 40px 60px;*/
 	    }
-	    .parallax-bg {
-	      position: absolute;
-	      left: 0;
-	      top: 0;
-	      width: 130%;
-	      height: 100%;
-	      -webkit-background-size: cover;
-	      background-size: cover;
-	      background-position: center;
+
+
+	    .banner-img{
+	    	width: 100%;
 	    }
-	    .swiper-slide .title {
-	      font-size: 41px;
-	      font-weight: 300;
-	    }
-	    .swiper-slide .subtitle {
-	      font-size: 21px;
-	    }
-	    .swiper-slide .text {
-	      font-size: 14px;
-	      max-width: 400px;
-	      line-height: 1.3;
-	    }
+
 		
+		.swiper-slide .banner_title{
+			position: absolute;
+			top: 35%;
+			left: 5%;
+			width: 90%;
+			height: 30%;
+			/*border: 1px solid red;*/
+			text-align: center;
+			font-size: 1.5rem;
+			/*font-size: 90px;*/
+			font-family: 'BOLT'; /* 使用 @font-face 自定义的字体 */
+		}
 
+		.banner_title2{
+			top: 17% !important;
+		}
 
+		.banner_title3{
+			top: 45% !important;
+			text-align: left !important;
+		}
 
+		.swiper-pagination-bullet{
+			width: 100px;
+		    height: 3px;
+		    border-radius: 0;
+		    /*background: #000;*/
+		    /*opacity: .2;*/
+		}
+
+		.swiper-pagination-bullet-active{
+			background: #ffffff;
+		}
 
 		.logo{
 			position: absolute;
 			left: 0;
 			top: 0;
-			width: 15%;
-			max-width: 150px;
+			width: 10%;
+			max-width: 100px;
 			z-index:99999999;
 		}
 
+
+		.bg_pic{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 600px;
+		}
+
+
+		.mid_div{
+			position: relative;
+		}
+
+		.mid_div .mid_text{
+			position: absolute;
+			top: 55%;
+			left: 12%;
+			width: 76%;
+			height: 30%;
+			/*border: 1px solid red;*/
+			text-align: center;
+			font-size: 30px;
+			line-height: 50px;
+			/*font-family: 'BOLT'; */
+		}
 
 
 	</style>
@@ -102,52 +157,46 @@
 
 <body style="margin:auto;border:0px solid blue; background-color:#FFFFFF;border: 0px solid blue;max-height: 60vh;">
 
-
+<img src="./images/logo.jpg" class="logo">
 
 <div class="container" style="position:relative;border:0px solid red;">
-
 	
-	<img src="./images/logo.jpg" class="logo">
 
-	<!-- Swiper -->
-	<div class="swiper-container" style="z-index: 999">
+<!-- Swiper -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
 
-	<div class="parallax-bg"  ></div>
+            	<div class="swiper-slide">
+            		<a href="#" style="width: 100%;"><img class="banner-img" src="./images/1.jpg"></a> 
+                    <span class="banner_title" >Bringing joy is our commitment<br>  to players around the globe</span>
+                </div>
 
-	<div class="swiper-wrapper">
+				<div class="swiper-slide">
+            		<a href="#" style="width: 100%;"><img class="banner-img" src="./images/2.jpg"></a> 
+                    <span class="banner_title banner_title2" >We bring togetherthe<br>  best talents<br>  in the gaming industry</span>
+                </div>
 
-	  <div class="swiper-slide" style="background-image:url(images/1.jpg)">
-	    <div class="title" data-swiper-parallax="-300">Slide 1</div>
-	    <div class="subtitle" data-swiper-parallax="-200">Subtitle</div>
-	    <div class="text" data-swiper-parallax="-100">
-	      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo. Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod. Aliquam hendrerit lorem at elit facilisis rutrum. Ut at ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec, tincidunt ut libero. Aenean feugiat non eros quis feugiat.</p>
-	    </div>
-	  </div>
+                <div class="swiper-slide">
+            		<a href="#" style="width: 100%;"><img class="banner-img" src="./images/3.jpg"></a> 
+                    <span class="banner_title banner_title3" >We specialize in <br>  the global distribution of <br>  premium gaming experiences</span>
+                </div>
 
-	  <div class="swiper-slide" style="background-image:url(images/2.jpg)">
-	    <div class="title" data-swiper-parallax="-300" data-swiper-parallax-opacity="0">Slide 2</div>
-	    <div class="subtitle" data-swiper-parallax="-200">Subtitle</div>
-	    <div class="text" data-swiper-parallax="-100">
-	      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo. Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod. Aliquam hendrerit lorem at elit facilisis rutrum. Ut at ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec, tincidunt ut libero. Aenean feugiat non eros quis feugiat.</p>
-	    </div>
-	  </div>
-	  <div class="swiper-slide" style="background-image:url(images/3.jpg)">
-	    <div class="title" data-swiper-parallax="-300">Slide 3</div>
-	    <div class="subtitle" data-swiper-parallax="-200">Subtitle</div>
-	    <div class="text" data-swiper-parallax="-100">
-	      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo. Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod. Aliquam hendrerit lorem at elit facilisis rutrum. Ut at ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec, tincidunt ut libero. Aenean feugiat non eros quis feugiat.</p>
-	    </div>
-	  </div>
-	</div>
-	<!-- Add Pagination -->
-	<div class="swiper-pagination swiper-pagination-white"></div>
+            </div>
 
-	</div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination swiper-pagination-banner" ></div>
+
+        </div>
+
 </div>
 
 
-<div style="border: 1px solid red;width: 100%;">
+<div  class="mid_div">
 	<img src="./images/mid.jpg" style="width: 100%;">
+
+<!-- 	<span class="mid_text" >Engine Games focuses on the development and publishing of games overseas. <br>
+Our team is a collection of talent sharing a wealth of game industry experience in a variety of different game genres and platforms. It is Engine Game’s goal to bring to gamers in every corner of the world.</span>
+ -->
 </div>
 
 
@@ -192,20 +241,26 @@ $(function(){
  	var swiper = new Swiper('.swiper-container', {
       speed: 600,
       parallax: true,
+      width : window.innerWidth, 
+      autoHeight: true, //enable auto height
+      loop:true,
       pagination: {
         el: '.swiper-pagination',
-        clickable: true,
-        loop:true,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        clickable: true,       
       },
     });
 
 
-});
+ 	$(window).resize(function(){
+            var width = $(window).width();
 
+            $(".banner_title").width( width *0.8 );
+            $(".banner-img").width( width );
+
+            // console.info("窗口宽度：" + width + "; 窗口高度：" + height);
+        });
+
+});
 
 
 
