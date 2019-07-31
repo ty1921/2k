@@ -17,7 +17,7 @@
 
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
 
 
 	<title> Mikey HOMEPAGE </title>
@@ -25,12 +25,61 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,user-scalable=no,maximum-scale=1.0" id="viewport">
 
 	<meta name="author" content="tyin@live.com">
+
+
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+	<![endif]-->
+
 	
 	 <!-- Link Swiper's CSS -->
   	 <link href="https://cdn.bootcss.com/Swiper/4.3.0/css/swiper.min.css" rel="stylesheet">
 
 
 	<style type="text/css">
+
+
+		@media screen and (max-width: 1440px){
+		    .swiper-slide .banner_title{
+  				font-size: 3.5rem !important;
+  			}
+		  
+  			.banner-img{
+  				height: 60vh !important;
+  			} 
+		}
+
+		@media screen and (max-width: 960px){
+
+		    .swiper-slide .banner_title{
+  				font-size: 1.5rem !important;
+  			}
+		  
+  			.banner-img{
+  				height: 60vh !important;
+  			} 
+
+  			.logo_div{
+  				position: relative;
+  				width: 100%;
+  				/*height: 100%;*/
+  				padding:2% 0;
+  				text-align: center;
+  				background-color: black;
+  			}
+
+  			.logo_div img{
+  				position:relative;
+			    width: 10%;
+  			}
+		}
+
+
+
+
+
+
 
 		@font-face {
             font-family: 'BOLTI';
@@ -46,36 +95,41 @@
 	      position: relative;
 	      width: 100%;
 	      height: 100%;
-	      text-transform:Uppercase;
+/* 	      min-width: 300px;
+text-transform:Uppercase; */
 	    }
 
 	    body {
-	      background: #eee;
-	      font-family: Microsoft Yahei, Helvetica, Arial, sans-serif;
-	      font-size: 14px;
-	      color:#000;
-	      margin: 0;
-	      padding: 0;
+			font-family: Microsoft Yahei, Helvetica, Arial, sans-serif;
+			font-size: 14px;
+			color:#000;
+			margin: 0;
+			padding: 0;
 	    }
 
 	    .swiper-container {
-	      width: 100%;
-	      height: 100%;
-	      background: #000;
+	    	position: relative;
+			width: 100%;
+			height: 100%;
+			background: #000;
 	    }
+
 
 	    .swiper-slide {
-	    	position: relative;
-	      font-size: 18px;
-	      color:#fff;
-	      -webkit-box-sizing: border-box;
-	      box-sizing: border-box;
-	      /*padding: 40px 60px;*/
+	    	overflow: hidden;
+			position: relative;
+			width: 100%;
+			height: 100%;
+			font-size: 18px;
+			color:#fff;
 	    }
-
+		
+	
 
 	    .banner-img{
 	    	width: 100%;
+	    	/*height: 50vh;*/
+	    	background:url('./images/1.jpg');
 	    }
 
 		
@@ -150,48 +204,73 @@
 		}
 
 
+		.clearfix:after {
+
+			content: ".";
+
+			display: block;
+
+			height: 0;
+
+			clear: both;
+
+			visibility: hidden;
+
+			}
+
+			.img_m{
+				width: 0;
+				height: 0;
+				opacity: 0;
+			}
+
+
 	</style>
 
 </head>
 
 <!-- BODY SECTION -------------------------------------------------------------------------------------->
 
-<body style="margin:auto;border:0px solid blue; background-color:#FFFFFF;border: 0px solid blue;max-height: 60vh;">
+<body>
 
-<img src="./images/logo.jpg" class="logo">
-
-<div class="container" style="position:relative;border:0px solid red;">
-	
-
-<!-- Swiper -->
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-
-            	<div class="swiper-slide">
-            		<a href="#" style="width: 100%;"><img class="banner-img" src="./images/1.jpg"></a> 
-                    <span class="banner_title" >Bringing joy is our commitment<br>  to players around the globe</span>
-                </div>
-
-				<div class="swiper-slide">
-            		<a href="#" style="width: 100%;"><img class="banner-img" src="./images/2.jpg"></a> 
-                    <span class="banner_title banner_title2" >We bring togetherthe<br>  best talents<br>  in the gaming industry</span>
-                </div>
-
-                <div class="swiper-slide">
-            		<a href="#" style="width: 100%;"><img class="banner-img" src="./images/3.jpg"></a> 
-                    <span class="banner_title banner_title3" >We specialize in <br>  the global distribution of <br>  premium gaming experiences</span>
-                </div>
-
-            </div>
-
-            <!-- Add Pagination -->
-            <div class="swiper-pagination swiper-pagination-banner" ></div>
-
-        </div>
-
+<div class="logo_div clearfix">
+	<img src="./images/logo.jpg" class="logo">
+	<div style="clear:both;"></div> 
 </div>
 
 
+<div class="container" style="position:relative;border:0px solid red;">
+
+  <!-- Swiper -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="swiper-zoom-container">
+          <img id="banner1" src="./images/1.jpg">
+          <span class="banner_title" >Bringing joy is our commitment<br>  to players around the globe</span>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="swiper-zoom-container">
+          <img id="banner2" src="./images/2.jpg">
+          <span class="banner_title banner_title2" >We bring togetherthe<br>  best talents<br>  in the gaming industry</span>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="swiper-zoom-container">
+          <img id="banner3" src="./images/3.jpg">
+          <span class="banner_title banner_title3" >We specialize in <br>  the global distribution of <br>  premium gaming experiences</span>
+        </div>
+      </div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination swiper-pagination-white"></div>
+  </div>
+
+
+
+
+<!-------------------------------------------------------------------------------------------------------------------->
 <div  class="mid_div">
 	<img src="./images/mid.jpg" style="width: 100%;">
 
@@ -201,126 +280,76 @@ Our team is a collection of talent sharing a wealth of game industry experience 
 </div>
 
 
-<div style="border: 1px solid blue;width: 100%;background-color: #000000;text-align: center;padding:30px 0;">
+<div style="border: 0px solid blue;width: 100%;background-color: #000000;text-align: center;padding:30px 0;">
 	<img src="./images/copyright.png" style="width: 24%;min-width: 300px;">
 </div>
 
-<!-- mask
-<div id="mask">
-	<img src="./images/loading.gif">
-</div> -->
+	
+	<img class="img_m" src="./images/m1.jpg">
+	<img class="img_m" src="./images/m2.jpg">
+	<img class="img_m" src="./images/m3.jpg">
+	
 
 <!-- JS SECTION -------------------------------------------------------------------------------------->
 
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 
-<script src="https://cdn.bootcss.com/Swiper/4.3.0/js/swiper.min.js"></script>
+<script src="https://cdn.bootcss.com/Swiper/4.5.0/js/swiper.min.js"></script>
 
 
 
 <script type="text/javascript">
-
-//comm config ----------------------------------------------
-var host 	  = 'http://192.168.15.248/';
-
-var video_id  = 0;
-
-//get request parameter
-var region 	  = fnGet( 'region' );
-
-
-var yy = new Array();
-
-
-
 
 
 
 //when document ready
 $(function(){
 
- 	var swiper = new Swiper('.swiper-container', {
+    fnReSize();
+
+
+    var swiper = new Swiper('.swiper-container', {
+      zoom: true,
       speed: 600,
-      parallax: true,
-      width : window.innerWidth, 
-      autoHeight: true, //enable auto height
       loop:true,
+      autoHeight: true, //enable auto height
       pagination: {
         el: '.swiper-pagination',
-        clickable: true,       
       },
     });
 
 
+
  	$(window).resize(function(){
-            var width = $(window).width();
+        fnReSize();
+    });
 
-            $(".banner_title").width( width *0.8 );
-            $(".banner-img").width( width );
 
-            // console.info("窗口宽度：" + width + "; 窗口高度：" + height);
-        });
+ 	//设置图片背景的函数
+    function fnReSize()
+    {
+    	console.log('当前宽度：'+$(window).width());
+
+    	var v = Math.random();
+
+        if( $(window).width() <= 600 )
+        {
+        	$("#banner1").attr("src","./images/m1.jpg?v=" + v );
+        	$("#banner2").attr("src","./images/m2.jpg?v=" + v );
+        	$("#banner3").attr("src","./images/m3.jpg?v=" + v );
+        }
+        else
+        {
+        	$("#banner1").attr("src","./images/1.jpg?v=" + v );
+        	$("#banner2").attr("src","./images/2.jpg?v=" + v );
+        	$("#banner3").attr("src","./images/3.jpg?v=" + v );
+        }
+    }
+
+    
 
 });
 
-
-
-//---------------------------------------------------------------
-//function section ----------------------------------------------
-//---------------------------------------------------------------
-
-/**
- * [fnReg new user register]
- * @return bool
- */
-function fnReg()
-{
-	$.ajax({
-		url: host + "gmd/f_api/comment_user.php",
-		data:{
-			'action':'register',
-			'game_user_id':uid,
-			'nickname': nickname,
-			'head_img': icon,
-			'frame_icon': frame_icon
-		},
-		type: 'POST',
-		dataType : "json",
-		success: function(res)
-		{	
-			if( res.code == 1 )
-			{
-				window.localStorage.setItem('gmd_user', 1);
-			}
-			else
-			{
-				console.log( res );
-
-				fnTips( yy[3]);
-			}
-		},
-		 error: function(XMLHttpRequest, textStatus, errorThrown) {
-		    console.log(XMLHttpRequest);
-			console.log(errorThrown);
-			console.log(textStatus);
-			fnTips( yy[4] );
-		}
-	});
-}
-
-
-
-
-/**
- * [fnGet get request parameter]
- * @param  {[char]} name [GET key]
- * @return {[char]}      [GET key's value]
- */
-function fnGet(name) { 
-    var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
-     var r = window.location.search.substr(1).match(reg);
-     if(r!=null)return  decodeURI(r[2]); return null;
-}
 
 
 
