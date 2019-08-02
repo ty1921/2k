@@ -53,7 +53,7 @@
 		@media screen and (max-width: 960px){
 
 		    .swiper-slide .banner_title{
-  				font-size: 2.6rem !important;
+  				font-size: 2.5rem !important;
   			}
 		  
   			.banner-img{
@@ -64,14 +64,15 @@
   				position: relative;
   				width: 100%;
   				/*height: 100%;*/
-  				padding:2% 0;
+  				padding:0;
   				text-align: center;
   				background-color: black;
+  				/*margin-top: -1%;*/
   			}
 
   			.logo_div img{
   				position:relative;
-			    width: 10%;
+			    width: 25%;
   			}
 
   			.banner_title1 {
@@ -80,6 +81,7 @@
 
   			.banner_title3 {
 			    top: 23% !important;
+			    text-align: center !important;
 			}
 
 			.banner_title2 {
@@ -155,10 +157,13 @@
 			width: 90%;
 			height: 30%;
 			/*border: 1px solid red;*/
-			text-align: center;
 			font-size: 5rem;
 			/*font-size: 90px;*/
 			font-family: 'BOLT'; /* 使用 @font-face 自定义的字体 */
+		}
+
+		.banner_title1{
+			text-align: center;
 		}
 
 		.banner_title2{
@@ -167,7 +172,7 @@
 
 		.banner_title3{
 			top: 45% ;
-			text-align: left !important;
+			text-align: left;
 		}
 
 		.swiper-pagination-bullet{
@@ -268,13 +273,13 @@
       <div class="swiper-slide">
         <div class="swiper-zoom-container">
           <img id="banner2" src="./images/2.jpg">
-          <span class="banner_title banner_title2" >We bring togetherthe<br>  best talents<br>  in the gaming industry</span>
+          <span class="banner_title banner_title2" >We <br>bring togetherthe<br>  best talents<br>  in the gaming industry</span>
         </div>
       </div>
       <div class="swiper-slide">
         <div class="swiper-zoom-container">
           <img id="banner3" src="./images/3.jpg">
-          <span class="banner_title banner_title3" >We specialize in <br>  the global distribution of <br>  premium gaming experiences</span>
+          <span class="banner_title banner_title3" >We specialize in<br>the global<br>distribution<br>of premium<br>gaming<br>experiences</span>
         </div>
       </div>
     </div>
@@ -287,7 +292,7 @@
 
 <!-------------------------------------------------------------------------------------------------------------------->
 <div  class="mid_div">
-	<img src="./images/mid.jpg" style="width: 100%;">
+	<img id="mid" src="./images/mid.jpg" style="width: 100%;">
 
 <!-- 	<span class="mid_text" >Engine Games focuses on the development and publishing of games overseas. <br>
 Our team is a collection of talent sharing a wealth of game industry experience in a variety of different game genres and platforms. It is Engine Game’s goal to bring to gamers in every corner of the world.</span>
@@ -299,11 +304,13 @@ Our team is a collection of talent sharing a wealth of game industry experience 
 	<img src="./images/copyright.png" style="width: 24%;min-width: 300px;">
 </div>
 
-	
+
+<div style="display: none;">
 	<img class="img_m" src="./images/m1.jpg">
 	<img class="img_m" src="./images/m2.jpg">
 	<img class="img_m" src="./images/m3.jpg">
-
+	<img class="img_m" src="./images/mid-m.jpg">
+</div>
 
 <!-- JS SECTION -------------------------------------------------------------------------------------->
 
@@ -352,12 +359,20 @@ $(function(){
         	$("#banner1").attr("src","./images/m1.jpg?v=" + v );
         	$("#banner2").attr("src","./images/m2.jpg?v=" + v );
         	$("#banner3").attr("src","./images/m3.jpg?v=" + v );
+
+        	$("#mid").attr("src","./images/mid-m.jpg?v=" + v );
+
+        	$(".banner_title3").html('We<br>specialize in<br>the global<br>distribution<br>of premium<br>gaming<br>experiences');
         }
         else
         {
         	$("#banner1").attr("src","./images/1.jpg?v=" + v );
         	$("#banner2").attr("src","./images/2.jpg?v=" + v );
         	$("#banner3").attr("src","./images/3.jpg?v=" + v );
+
+        	$("#mid").attr("src","./images/mid.jpg?v=" + v );
+
+        	$(".banner_title3").html('We specialize in<br>the global distribution of<br>premium gaming experiences');
         }
     }
 
