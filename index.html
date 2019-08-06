@@ -39,7 +39,22 @@
 
 	<style type="text/css">
 
+		
+			.logo_div{
+  				position: relative;
+  				width: 100%;
+  				/*height: 100%;*/
+  				padding:0;
+  				text-align: center;
+  				background-color: black;
+  				/*margin-top: -1%;*/
+  			}
 
+  			.logo_div img{
+  				position:relative;
+			    width: 25%;
+  			}
+  			
 		@media screen and (max-width: 1440px){
 		    .swiper-slide .banner_title{
   				font-size: 3.5rem !important;
@@ -60,20 +75,7 @@
   				height: 60vh !important;
   			} 
 
-  			.logo_div{
-  				position: relative;
-  				width: 100%;
-  				/*height: 100%;*/
-  				padding:0;
-  				text-align: center;
-  				background-color: black;
-  				/*margin-top: -1%;*/
-  			}
-
-  			.logo_div img{
-  				position:relative;
-			    width: 25%;
-  			}
+  		
 
   			.banner_title1 {
 			    top: 25% !important;
@@ -152,7 +154,6 @@
 		
 		.swiper-slide .banner_title{
 			position: absolute;
-			top: 35%;
 			left: 5%;
 			width: 90%;
 			height: 30%;
@@ -163,6 +164,7 @@
 		}
 
 		.banner_title1{
+			top: 35%;
 			text-align: center;
 		}
 
@@ -273,7 +275,7 @@
       <div class="swiper-slide">
         <div class="swiper-zoom-container">
           <img id="banner2" src="./images/2.jpg">
-          <span class="banner_title banner_title2" >We <br>bring togetherthe<br>  best talents<br>  in the gaming industry</span>
+          <span class="banner_title banner_title2" >We bring togetherthe<br>  best talents<br>  in the gaming industry</span>
         </div>
       </div>
       <div class="swiper-slide">
@@ -331,9 +333,14 @@ $(function(){
 
 
     var swiper = new Swiper('.swiper-container', {
-      zoom: true,
-      speed: 600,
+   	  autoplay: {
+	    delay: 5000,
+	    stopOnLastSlide: false,
+	    disableOnInteraction: true,
+    },
+      speed:500,
       loop:true,
+      
       autoHeight: true, //enable auto height
       pagination: {
         el: '.swiper-pagination',
