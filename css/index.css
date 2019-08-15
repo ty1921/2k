@@ -1,0 +1,205 @@
+@font-face {
+    font-family: 'BOLTI';
+    src: url('./BOLTI.TTF') format('truetype');
+}
+
+@font-face {
+    font-family: 'BOLT';
+    src: url('./BOLT.TTF') format('truetype');
+}
+
+html, body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-transform:Uppercase; 
+/* 	      min-width: 300px;*/
+
+}
+
+body {
+	font-family: Microsoft Yahei, Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	color:#000;
+	margin: 0;
+	padding: 0;
+}
+
+.logo_div{
+	position: relative;
+	width: 100%;
+	/*height: 100%;*/
+	padding:0;
+	text-align: center;
+	background-color: black;
+	/*margin-top: -1%;*/
+}
+
+.logo_div img{
+	position:relative;
+    width: 25%;
+}
+	
+@media screen and (max-width: 1440px){
+    .swiper-slide .banner_title{
+		font-size: 3.5rem !important;
+	}
+  
+	.banner-img{
+		height: 60vh !important;
+	} 
+}
+
+@media screen and (max-width: 960px){
+
+    .swiper-slide .banner_title{
+		font-size: 2.5rem !important;
+	}
+  
+	.banner-img{
+		height: 60vh !important;
+	} 
+
+
+
+	.banner_title1 {
+	    top: 25% !important;
+	}
+
+	.banner_title3 {
+	    top: 23% !important;
+	    text-align: center !important;
+	}
+
+	.banner_title2 {
+	    top: 15% !important;
+	}
+
+	
+}
+
+
+
+
+
+
+
+.swiper-container {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: #000;
+}
+
+
+.swiper-slide {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	font-size: 18px;
+	color:#fff;
+}
+
+
+
+.banner-img{
+	width: 100%;
+	/*height: 50vh;*/
+	background:url('../images/1.jpg');
+}
+
+
+.swiper-slide .banner_title{
+	position: absolute;
+	left: 5%;
+	width: 90%;
+	height: 30%;
+	/*border: 1px solid red;*/
+	font-size: 5rem;
+	/*font-size: 90px;*/
+	font-family: 'BOLT'; /* 使用 @font-face 自定义的字体 */
+}
+
+.banner_title1{
+	top: 35%;
+	text-align: center;
+}
+
+.banner_title2{
+	top: 17% ;
+}
+
+.banner_title3{
+	top: 45% ;
+	text-align: left;
+}
+
+.swiper-pagination-bullet{
+	width: 100px;
+    height: 3px;
+    border-radius: 0;
+    /*background: #000;*/
+    /*opacity: .2;*/
+}
+
+.swiper-pagination-bullet-active{
+	background: #ffffff;
+}
+
+.logo{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 10%;
+	max-width: 100px;
+	z-index:99999999;
+}
+
+
+.bg_pic{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 600px;
+}
+
+
+.mid_div{
+	position: relative;
+}
+
+.mid_div .mid_text{
+	position: absolute;
+	top: 55%;
+	left: 12%;
+	width: 76%;
+	height: 30%;
+	/*border: 1px solid red;*/
+	text-align: center;
+	font-size: 30px;
+	line-height: 50px;
+	/*font-family: 'BOLT'; */
+}
+
+
+.clearfix:after {
+
+	content: ".";
+
+	display: block;
+
+	height: 0;
+
+	clear: both;
+
+	visibility: hidden;
+
+	}
+
+	.img_m{
+		width: 0;
+		height: 0;
+		opacity: 0;
+	}
